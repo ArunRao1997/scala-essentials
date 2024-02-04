@@ -127,6 +127,12 @@ object ListsDemo {
     number <- List(1,2,3,4,5,6,7,8)
   }yield s"$letter$number"
 
+  val checkboard_v2 = for {
+    letter <- List('A' to 'H').toList
+    number <- List(1 to 8).toList
+  } yield s"$letter$number"  //same as above
+
+
   // for comprehensions are not loops, they are expressions
   def main(args: Array[String]): Unit = {
     println(aList)
